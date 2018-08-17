@@ -1,0 +1,129 @@
+@import "~mdi/css/materialdesignicons.css";
+
+label {
+	position: relative;
+
+	input {
+		border: 0;
+		background: transparent;
+		padding: 10px;
+		border-bottom: 2px solid #808080;
+		font-family: inherit;
+		font-size: 1.1rem;
+		color: #303030;
+		outline: none;
+
+		& ~ span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: #00bcd4;
+			transition: all .4s ease;
+			transform: scaleX(0);
+		}
+
+		&:focus ~ span {
+			transform: scaleX(1);
+		}
+	}
+}
+
+input[type="number"] {
+	border: 0;
+	background: transparent;
+	padding: 5px;
+	border-bottom: 1px solid #808080;
+	font-family: inherit;
+	font-size: 1rem;
+	color: #303030;
+	outline: none;
+	width: 60px;
+}
+
+.fade-translate {
+	&-move {
+		transition: all .4s ease;
+	}
+
+	&-enter {
+		opacity: 0;
+		transform: translateX(30px);
+
+		&-active {
+			transition: all .4s ease;
+		}
+	}
+
+	&-leave {
+		&-to {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+
+		&-active {
+			transition: all .4s ease;
+			position: absolute;
+		}
+	}
+}
+
+.Rippler {
+	position: relative;
+
+	&__ripple {
+		animation-fill-mode: forwards;
+		animation-duration: .4s;
+		animation-timing-function: ease;
+		background: rgba(0, 0, 0, .2);
+		border-radius: 100%;
+		position: absolute;
+		pointer-events: none;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: all .4s ease;
+
+		&--active {
+			animation-name: Ripple;
+		}
+
+		&--clear {
+			animation-name: RippleClear;
+			width: 200%;
+			padding-bottom: 200%;
+		}
+	}
+}
+
+@keyframes Ripple {
+	0% {
+		width: 0;
+		padding-bottom: 0;
+		opacity: 0;
+	}
+
+	40% {
+		width: 0;
+		padding-bottom: 0;
+		opacity: 1;
+	}
+
+	100% {
+		width: 200%;
+		padding-bottom: 200%;
+		opacity: 1;
+	}
+}
+
+@keyframes RippleClear {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

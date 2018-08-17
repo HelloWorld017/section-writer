@@ -1,0 +1,49 @@
+{
+  "name": "section-writer",
+  "version": "1.0.0",
+  "description": "A tool to write self introduction.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloWorld017/section-writer.git"
+  },
+  "keywords": [
+    "editor"
+  ],
+  "author": "Khinenw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelloWorld017/section-writer/issues"
+  },
+  "homepage": "https://github.com/HelloWorld017/section-writer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mdi": "^2.2.43",
+    "morgan": "^1.9.0",
+    "rimraf": "^2.6.2",
+    "simple-git": "^1.96.0",
+    "vue": "^2.5.16",
+    "vue-ripple-directive": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.15.0",
+    "webpack-cli": "^3.0.8",
+    "webpackbar": "^2.6.1"
+  }
+}
