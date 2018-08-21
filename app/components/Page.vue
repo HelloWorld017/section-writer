@@ -8,6 +8,10 @@
 				</label>
 
 				<div class="Page__tools">
+					<div class="Page__tags" v-if="descriptor.tags">
+						<span v-for="tag in descriptor.tags" class="Page__tag">{{tag}}</span>
+					</div>
+
 					<span class="Page__counter">
 						{{length}}
 						<span v-if="!saved">*</span>
@@ -73,6 +77,7 @@
 
 		&__tools {
 			display: flex;
+			align-items: center;
 			font-family: inherit;
 
 			*:not(:last-child) {
@@ -82,6 +87,19 @@
 			i {
 				cursor: pointer;
 			}
+		}
+
+		&__tags {
+			display: flex;
+			align-items: center;
+		}
+
+		&__tag {
+			background: #e1e2e3;
+			padding: 3px;
+			border-radius: 3px;
+			font-size: 0.9rem;
+			font-family: NanumGothicCoding, D2Coding, Fira Code, monospace;
 		}
 
 		&__content {

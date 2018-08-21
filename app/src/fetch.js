@@ -7,7 +7,7 @@ export default async function request(location, args, method) {
 	};
 
 	if(request.token) {
-		request.headers.Authentication = `Basic ${btoa('user:' + request.token)}`;
+		request.headers.Authorization = `Basic ${btoa('user:' + request.token)}`;
 	}
 
 	if(args) {
